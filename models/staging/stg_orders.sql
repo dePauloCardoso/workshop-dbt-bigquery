@@ -30,11 +30,11 @@ renamed as (
         tax_paid as tax_paid_cents,
         order_total as order_total_cents,
         -- Substituição manual do cents_to_dollars
-        {{ cents_to_dollars(subtotal) }} as subtotal,
+        {{ cents_to_dollars('subtotal') }} as subtotal,
         -- Substituição manual do cents_to_dollars
-        {{ cents_to_dollars(tax_paid) }} as tax_paid,
+        {{ cents_to_dollars('tax_paid') }} as tax_paid,
         -- Substituição manual do cents_to_dollars
-        {{ cents_to_dollars(order_total) }} as order_total,
+        {{ cents_to_dollars('order_total') }} as order_total,
 
         -- Substituição manual do dbt.date_trunc
         DATE_TRUNC(DATE(ordered_at), DAY) as ordered_at
