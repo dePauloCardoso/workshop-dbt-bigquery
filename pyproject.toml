@@ -1,0 +1,18 @@
+[project]
+name = "1-workshop-dbt-bigquery"
+version = "0.1.0"
+description = "somente o respositorio do workshop"
+authors = [
+    {name = "Paulo Cardoso",email = "cardosopaulohenrique91@gmail.com"}
+]
+readme = "README.md"
+requires-python = "3.12.1"
+dependencies = [
+    "dbt-core (>=1.9.8,<2.0.0)",
+    "dbt-bigquery (>=1.9.2,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
