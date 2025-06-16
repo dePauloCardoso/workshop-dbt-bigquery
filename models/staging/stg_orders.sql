@@ -37,8 +37,7 @@ renamed as (
         {{ cents_to_dollars('order_total') }} as order_total,
 
         -- Substituição manual do dbt.date_trunc
-        DATE_TRUNC(DATE(ordered_at), DAY) as ordered_at
-
+        DATE_TRUNC(DATE(ordered_at), day) as ordered_at
 
     from combined_sources
 

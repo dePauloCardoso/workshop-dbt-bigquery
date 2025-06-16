@@ -9,7 +9,9 @@ readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "dbt-core (>=1.9.8,<2.0.0)",
-    "dbt-bigquery (>=1.9.2,<2.0.0)"
+    "dbt-bigquery (>=1.9.2,<2.0.0)",
+    "taskipy (>=1.14.1,<2.0.0)",
+    "sqlfluff-templater-dbt (>=3.4.1,<4.0.0)"
 ]
 
 
@@ -20,3 +22,6 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.2.0"
 sqlfluff = "^3.4.1"
+
+[tool.taskipy.tasks]
+fix = "sqlfluff fix snapshots && sqlfluff fix models"
